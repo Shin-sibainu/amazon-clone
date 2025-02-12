@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,10 +9,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        amazon: {
+          DEFAULT: "#131921",
+          light: "#232F3E",
+          yellow: "#febd69",
+          link: "#007185",
+          "link-dark": "#002f36",
+        },
       },
+      maxWidth: {
+        "screen-2xl": "1500px",
+      }
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;
